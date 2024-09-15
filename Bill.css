@@ -1,0 +1,432 @@
+
+/* Billing Section */
+/* General Layout */
+.billing-container {
+    display: flex;
+    justify-content: space-between; /* Space between billing and blog sections */
+    padding: 20px;
+    gap: 20px;
+    border-color: #ff9bb0;
+    margin-top: 10
+    
+    
+    0px;
+    
+
+}
+
+/* Billing Section */
+#billing {
+    max-width: 300px; /* Adjusted width */
+    padding: 15px;
+    background-color: #f9f9f9; /* Light grey background */
+    border: 2px solid #ff9bb0; /* Subtle light blue border */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Apply Discount Section */
+.discount-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.discount-section label {
+    font-size: 13px;
+    color: #333;
+}
+
+.discount-section input {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.discount-section button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.discount-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Blog Section */
+.blog-section {
+    max-width: 300px; /* Adjust width for blog */
+    padding: 15px;
+    background-color: #ffffff; /* White background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.blog-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.blog-section p {
+    font-size: 14px;
+    color: #333;
+}
+
+.blog-section button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.blog-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .billing-container {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        align-items: center; /* Center align the sections */
+    }
+
+    #billing, .blog-section {
+        max-width: 90%; /* Expand to fit more space on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    #billing, .blog-section {
+        max-width: 95%;
+        padding: 10px;
+    }
+}
+
+/* Bill Table */
+#bill-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px; /* Reduced bottom margin */
+}
+
+#bill-table th, #bill-table td {
+    padding: 10px; /* Reduced padding */
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* Light border */
+}
+
+#bill-table th {
+    background-color: #e3f2fd; /* Light blue header */
+    color: #1565c0; /* Dark blue text */
+    font-weight: bold;
+}
+
+#bill-table td {
+    background-color: #ffffff; /* White background for rows */
+}
+
+/* Total Section */
+.total {
+    text-align: right;
+    font-size: 16px; /* Reduced font size */
+    margin-top: 8px;
+    color: #333333; /* Dark text color */
+}
+
+.total strong {
+    font-size: 18px; /* Slightly smaller font size */
+    color: #1565c0; /* Accent blue color */
+}
+
+/* Customer Info */
+.customer-info {
+    margin-top: 10px; /* Reduced top margin */
+    font-size: 13px; /* Reduced font size */
+    color: #333333; /* Dark text color */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Stretch inputs to fill the container */
+}
+
+.customer-info p {
+    margin: 3px 0; /* Reduced spacing between labels */
+}
+
+.customer-info input {
+    padding: 8px; /* Reduced padding */
+    margin-top: 5px; /* Reduced margin */
+    width: 100%; /* Full width for better alignment */
+    border: 1px solid #cfd8dc; /* Subtle border */
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark input text */
+    border-radius: 6px; /* Slightly reduced border radius */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Footer Note */
+.footer-note {
+    text-align: center;
+    margin-top: 15px; /* Reduced top margin */
+    font-size: 13px; /* Reduced font size */
+    color: #1565c0; /* Accent color for footer text */
+}
+
+.footer-note p {
+    margin: 3px 0; /* Reduced spacing */
+}
+
+/* Button Styling */
+button {
+    background-color: #1565c0; /* Blue button color */
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Smaller padding for buttons */
+    cursor: pointer;
+    border-radius: 6px; /* Reduced border radius */
+    font-size: 13px; /* Reduced font size */
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px; /* Reduced spacing before the button */
+    align-self: center; /* Center align button */
+}
+
+button:hover {
+    background-color: #0d47a1; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #billing {
+        max-width: 80%; /* Adjust width for mobile screens */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .billing-container {
+        padding: 15px; /* Additional padding for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Full-width buttons on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #billing {
+        max-width: 90%; /* Further adjust width for smaller devices */
+        padding: 10px; /* Reduced padding for very small screens */
+    }
+
+    .billing-container {
+        padding: 10px; /* Add padding around container */
+    }
+
+    #bill-table th, #bill-table td {
+        padding: 8px; /* Further reduced padding for smaller screens */
+    }
+}
+
+.logo
+{
+    width: 150px;
+}
+body
+{
+    
+
+}
+/* Modal styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Sits on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    animation: slideIn 0.4s ease-out; /* Animation effect */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.modal-content button {
+    padding: 10px 20px;
+    background-color: #0044cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #0033aa;
+}
+
+/* Animation for modal */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Video Element */
+#settle-animation {
+    display: none; /* Hidden by default */
+}
+
+/* Remove button styling */
+.remove-item-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.remove-item-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Trash icon styling */
+.remove-icon {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.remove-item-btn:hover .remove-icon {
+    filter: grayscale(0); /* Full color on hover */
+}
+
+/* QR Code Container */
+.qrcode-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.qrcode-container h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#qrcode {
+    display: inline-block;
+}
+
+/* Table adjustments for the remove column */
+#bill-table th, #bill-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+#bill-table th {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+#bill-table td {
+    background-color: #ffffff;
+    vertical-align: middle;
+}
+
+/* QR Code Container */
+.qrcode-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.qrcode-container h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#qrcode {
+    display: inline-block;
+}
+
+/* Remove button styling */
+.remove-item-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.remove-item-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Remove icon styling */
+.remove-icon {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(100%); /* Initial grayscale filter */
+    transition: filter 0.3s ease;
+}
+
+.remove-item-btn:hover .remove-icon {
+    filter: grayscale(0); /* Remove grayscale on hover */
+}
+
+/* Add to Bill.css */
+
+.camera-icon-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.selfie-preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#selfie-image {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

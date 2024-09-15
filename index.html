@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fz_BillinG - Main</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <header>
+        <div class="bill-header">
+            <img src="Dish/FZBillinG Logo.png"  alt="Restaurant Logo" class="logo">
+            
+        </div>
+    </header>
+
+    <button id="goToDashboard">DashBoard</button>
+    <a  href="http://192.168.232.18:5500/Dish
+    
+    /Login.html">
+    <img src='Dish/exit-door-removebg-preview.png'  alt="Restaurant Logo" class="LogOut">
+    </a>
+  
+
+
+    <main>
+        <section id="tables">
+            <h2>Tables</h2>
+            <div class="table-buttons">
+                <!-- Buttons for tables -->
+                <button data-table="Table 1">Table 1</button>
+                <button data-table="Table 2">Table 2</button>
+                <!-- Add more table buttons as needed -->
+                <button data-table="Table 3">Table 3</button>
+                <button data-table="Table 4">Table 4</button>
+                <button data-table="Table 5">Table 5</button>
+                <button data-table="Table 6">Table 6</button>
+                <button data-table="Table 7">Table 7</button>
+                <button data-table="Table 8">Table 8</button>
+                <button data-table="Table 10">Table 9</button>
+                <button data-table="Table 12">Table 12</button>
+                <button data-table="Table 13">Table 13</button>
+                <button data-table="Table 14">Table 14</button>
+                <button data-table="Table 15">Table 15</button>
+                <button data-table="Table 16">Table 16</button>
+            </div>
+        </section>
+
+        <section id="categories">
+            <h2>Categories</h2>
+            <select id="category-select">
+                <option value="all">All</option>
+                <option value="main">Main Courses</option>
+                <option value="dessert">Desserts</option>
+                <option value="cold">Cold</option>
+                <!-- Add more categories as needed -->
+            </select>
+        </section>
+
+        <section id="menu">
+            <h2>Menu</h2>
+            <!-- Existing dishes -->
+            <div class="dish" data-id="7" data-category="main">
+                <img src="Dish/Dosa.jpg" alt="Dosa">
+                <p>Dosa - 70</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="6" data-category="main">
+                <img src="Dish/DalKhichdi.jpg" alt="DalKhichdi">
+                <p>DalKhichdi - 120</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="5" data-category="main">
+                <img src="Dish/DumBiryani.jpg" alt="Dum Biryani">
+                <p>Dum Biryani - 200</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="4" data-category="main">
+                <img src="Dish/PaneerTikka.jpg" alt="Paneer Tikka">
+                <p>Paneer Tikka - 150</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="3" data-category="dessert">
+                <img src="Dish/MangoIce.jpg" alt="Mango Ice">
+                <p>Mango Ice - 100</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="9" data-category="dessert">
+                <img src="Dish/FriedRice.jpg" alt="Fried Rice">
+                <p>Fried Rice - 80</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="10" data-category="cold">
+                <img src="Dish/Coffee.jpg" alt="Coffee">
+                <p>Coffee - 25</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="11" data-category="dessert">
+                <img src="Dish/Tea.jpg" alt="Tea">
+                <p>Tea - 10</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="12" data-category="cold">
+                <img src="Dish/Pepsi.jpg" alt="Pepsi">
+                <p>Pepsi - 50</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="13" data-category="dessert">
+                <img src="Dish/Burger.jpg" alt="Burger">
+                <p>Burger - 150</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="14" data-category="dessert">
+                <img src="Dish/Dal.jpg" alt="Dal">
+                <p>Dal - 100</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="15" data-category="cold">
+                <img src="Dish/Water.jpg" alt="Water">
+                <p>Water - 30</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="16" data-category="dessert">
+                <img src="Dish/Mojito.jpg" alt="Mojito">
+                <p>Mojito - 200</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="17" data-category="dessert">
+                <img src="Dish/BananaSk.jpg" alt="Banana Sk">
+                <p>Banana Sk - 90</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+            <div class="dish" data-id="18" data-category="cold">
+                <img src="Dish/Alcohol.jpg" alt="Alcohol">
+                <p>Alcohol - 500</p>
+                <button class="add-to-order">Add to Order</button>
+            </div>
+        </section>
+
+        <section id="order-summary">
+            <h2>Order Summary</h2>
+            <table id="bill-items">
+                <!-- Items will be dynamically added here -->
+            </table>
+            <div class="total">
+                <strong>Total Amount: <span id="total-price">0</span></strong>
+            </div>
+            <br>
+            <button id="finalizeOrder">Continue</button>
+        </section>
+    </main>
+
+    <script src="js.js"></script>
+</body>
+</html>

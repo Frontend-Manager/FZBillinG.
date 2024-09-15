@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fz_BillinG - Billing</title>
+    <link rel="stylesheet" href="Bill.css">
+</head>
+<body>
+    <div class="billing-container">
+        <!-- Camera Icon -->
+        <div class="camera-icon-container">
+            <img src="Dish/camera-icon.png" alt="Camera Icon" id="camera-icon" style="width: 40px; cursor: pointer;">
+        </div>
+
+        <!-- Hidden Print Section -->
+        <div id="print-section" class="print-section">
+            <div class="bill-header">
+                <!-- Add content for bill header if needed -->
+            </div>
+        </div>
+
+        <!-- Main Billing Section (Visible on screen) -->
+        <div id="billing">
+            <img src="Dish/FZBillinG Logo.png" alt="Brand Logo" class="logo">
+            <table id="bill-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody id="bill-items">
+                    <tr>
+                        <td colspan="4">No items ordered.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="total">
+                <strong>Total: <span id="total-price">₹0.00</span></strong>
+            </div>
+
+            <!-- Apply Discount Section -->
+            <div class="discount-section">
+                <label for="discount">Apply Discount:</label>
+                <input type="number" id="discount" placeholder="Enter discount %" min="0" max="100">
+                <button id="applyDiscount">Apply</button>
+            </div>
+
+            <button id="finalizeOrder">Paid</button>
+            
+            <!-- Selfie Preview Section -->
+            <div id="selfie-preview" class="selfie-preview">
+                <img id="selfie-image" alt="Selfie" style="width: 100px; height: auto; display: none;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for "Scan and Pay" -->
+    <div id="order-settled-modal" class="modal">
+        <div class="modal-content">
+            <h2>Scan And Pay</h2>
+            <img src="Dish/Qr.jpg" alt="QR Code" style="width: 150px;" height="150px">
+            <video id="settle-animation" width="320" height="240" style="display: none;">
+                <source src="Dish/Successfull.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button id="close-modal">Settle</button>
+        </div>
+    </div>
+
+    <script src="Bill.js"></script>
+</body>
+</html>

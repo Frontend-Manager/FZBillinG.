@@ -1,0 +1,303 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    color: #333333; /* Dark text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff; /* Dark blue header */
+    padding: 15px 20px;
+    text-align: center;
+    color: #ffffff; /* White text */
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 4px solid #ff9bb0; /* Pastel pink border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+/* Main Layout */
+main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap; /* Make it responsive */
+    gap: 20px;
+}
+
+/* Sections */
+#tables, #menu, #billing {
+    flex: 1 1 100%; /* Full width on small screens */
+    max-width: 100%;
+    border: 1px solid #ff9bb0; /* Pastel pink border */
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 12px;
+    color: #333333; /* Dark text color */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+/* Tables Section */
+#tables {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.table-buttons {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.table-buttons button {
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Subtle shadow for buttons */
+}
+
+.table-buttons button:hover {
+    background-color: orangered; /* Darker blue on hover */
+    transform: translateY(-3px); /* Hover effect */
+}
+
+/* Menu Section */
+#menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 600px; /* Set a max height to enable scrolling */
+    padding-right: 20px; /* Add space for the scroll bar */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #007bff #f0f8ff; /* For Firefox */
+}
+/* Media query for screens with max width of 600px (mobile devices) */
+@media (max-width: 600px) {
+    #menu {
+        grid-template-columns: repeat(2, 1fr); /* Display 2 dishes per row */
+    }
+}
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari) */
+#menu::-webkit-scrollbar {
+    width: 12px; /* Scrollbar width */
+}
+
+#menu::-webkit-scrollbar-track {
+    background: #f0f8ff; /* Track color */
+    border-radius: 10px; /* Rounded corners */
+}
+
+#menu::-webkit-scrollbar-thumb {
+    background-color: #007bff; /* Scrollbar color */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid #f0f8ff; /* Space around the thumb */
+}
+
+#menu::-webkit-scrollbar-thumb:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Dish Styles */
+.dish {
+    border: 1px solid #007bff; /* Blue border */
+    padding: 15px;
+    text-align: center;
+    border-radius: 12px;
+    background-color: #f9f9f9; /* Slightly off-white background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow for card effect */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+}
+
+.dish img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 10px;
+    border: 2px solid #007bff; /* Blue border around image */
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.dish img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.dish p {
+    font-size: 14px;
+    color: #666666; /* Slightly lighter text color */
+    margin: 5px 0;
+}
+
+.dish button {
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.dish button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Print Styling */
+@media print {
+    body {
+        background: none;
+        color: #000000; /* Dark text for print */
+    }
+    
+    #billing {
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        border: none;
+        background-color: #ffffff; /* Change to white for print */
+        color: #000000; /* Dark text for print */
+    }
+
+    .bill-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .bill-header img {
+        width: 60px; /* Adjust logo size for print */
+        height: auto;
+    }
+
+    #bill-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    #bill-table th, #bill-table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .total {
+        text-align: right;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    .total strong {
+        font-size: 20px;
+    }
+
+    .customer-info, .footer-note {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    @page {
+        size: A4; /* Adjust page size */
+        margin: 20mm; /* Set page margins */
+    }
+}
+
+/* Dropdown and Button Styles */
+#category-select {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 300px; /* Adjust based on your layout */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: border-color 0.3s;
+}
+
+#category-select:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+}
+
+/* Dashboard Button */
+#goToDashboard {
+    background-color: #ff5722; /* Orange background for distinction */
+    margin-left: auto;
+    display: inline-block;
+    border: 1px solid #e64a19; /* Darker orange border */
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#goToDashboard:hover {
+    background-color: #e64a19; /* Darker orange on hover */
+}
+
+/* Logo */
+.logo {
+    width: 160px;
+    margin-left: 0; /* Center logo if needed */
+    display: block;
+    
+}
+
+.Pogo {
+    width: 300px;
+    margin-left: auto;
+    float: right;
+}
+
+#finalizeOrder
+{
+    border: solid #e64a19 2px;
+    font-size: 25px;
+    margin-left: 200px;
+    background: #007bff;
+    border-radius: 16px;
+    cursor: pointer;
+    color: #fff;
+    border-color: #0056b3;
+}
+.LogOut
+{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+    margin-top: -20px;
+    
+}
+a
+{
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+}

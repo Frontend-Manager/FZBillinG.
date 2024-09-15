@@ -1,0 +1,109 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    margin: 0;
+    padding: 0;
+    color: #333333; /* Dark text color */
+}
+
+header {
+    background-color: #007bff; /* Bright blue header */
+    padding: 20px;
+    text-align: center;
+    color: #ffffff; /* White text */
+    font-size: 28px;
+    font-weight: bold;
+    border-bottom: 4px solid #ff9bb0; /* Pastel pink border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.dashboard {
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 24px;
+    color: #007bff; /* Blue color */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555555; /* Darker text for labels */
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 6px;
+    background-color: #ffffff; /* White background */
+    color: #333333; /* Dark input text */
+}
+
+button {
+    background-color: #007bff; /* Blue button color */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#item-list {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: #333333; /* Dark text color */
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Light border */
+    font-size: 14px;
+}
+
+th {
+    background-color: #f0f8ff; /* Light blue background for header */
+    color: #007bff; /* Blue text */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    .form-group input {
+        padding: 8px;
+    }
+
+    th, td {
+        font-size: 12px;
+    }
+}
